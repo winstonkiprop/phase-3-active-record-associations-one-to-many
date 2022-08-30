@@ -206,7 +206,6 @@ $ bundle exec rake console
 From the console, access the first review:
 
 ```rb
-# Access the first review instance in the database
 review = Review.first
 # => #<Review:0x00007ffc23c58e20 id: 1, score: 6, comment: "Velit a tenetur eius.", game_id: 1>
 
@@ -315,8 +314,7 @@ Our `Game` class is set up in `app/models/game.rb`. We need to tell the
 
 ```rb
 class Game < ActiveRecord::Base
-  has_many :reviews
-
+ 
 end
 ```
 
